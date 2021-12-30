@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import Cafe from "./components/Cafe";
 
 export default function App() {
@@ -7,8 +7,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Cafe />
-      <StatusBar style="auto" />
+      <Text>Passiv</Text>
+      <Button
+        title="View Portfolio"
+        onPress={() => {
+          console.log("button clicked");
+        }}
+      ></Button>
     </View>
   );
 }
@@ -16,7 +21,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#a3f3f9",
     alignItems: "center",
     justifyContent: "center",
   },
